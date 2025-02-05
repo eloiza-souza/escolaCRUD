@@ -2,6 +2,7 @@ package com.zup.escolaCRUD.controllers;
 
 import com.zup.escolaCRUD.models.Aluno;
 import com.zup.escolaCRUD.services.AlunoService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -20,12 +21,12 @@ public class AlunoController {
     }
 
     @PostMapping
-    public Aluno salvar(@RequestBody Aluno aluno) {
+    public Aluno salvar(@Valid @RequestBody Aluno aluno) {
         return alunoService.save(aluno);
     }
 
     @PutMapping("/{id}")
-    public Aluno atualizar(@PathVariable Long id, @RequestBody Aluno aluno) {
+    public Aluno atualizar(@Valid @PathVariable Long id, @RequestBody Aluno aluno) {
         return alunoService.update(id, aluno);
     }
 
