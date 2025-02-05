@@ -112,10 +112,10 @@ Exemplo de resposta para o endpoint **GET** `/alunos`:
 - Verifique se as variáveis de ambiente estão configuradas corretamente.
 
 ## 💡 Dicas
-- Use o comando abaixo para criar a tabela `aluno` no banco de dados, caso necessário:
+- Use o comando abaixo para criar a tabela `alunos` no banco de dados, caso necessário:
   ```sql
-  CREATE TABLE aluno (
-      id SERIAL PRIMARY KEY,
+  CREATE TABLE alunos (
+      id BIGSERIAL PRIMARY KEY,
       name VARCHAR(255) NOT NULL,
       age INT NOT NULL
   );
