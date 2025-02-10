@@ -18,7 +18,7 @@ public class Aluno {
     @NotBlank(message = "O nome do aluno não pode ser vazio")
     private String name;
 
-    @Positive(message = "A idade deve ser um número positivo")
+    @Positive(message = "A idade deve ser um número inteiro maior que zero")
     private int age;
 
     public Aluno() {
